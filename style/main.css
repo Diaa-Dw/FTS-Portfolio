@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #08192d;
+  --secondary-color: #b8e81b;
+  --font-size-base: 1.4rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
