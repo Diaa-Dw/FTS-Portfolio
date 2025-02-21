@@ -1,0 +1,25 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--navy);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  font-family: var(--font-family);
+  height: 200vh;
+}
+
+/* Container that make the max width of page is 1240px */
+.container {
+  max-width: 124rem;
+  margin: 0 auto;
+}

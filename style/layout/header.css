@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  padding: var(--spacing-l) var(--spacing-xl);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+/* Styling buttons in that handle navbar on mobiles viewport */
+.navbar-close-btn {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  padding: 0.5rem 0.8rem;
+}
+
+/* Styling navbar and it's items */
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+  width: 100%;
+  max-width: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--light-navy);
+
+  /* display: none; */
+}
+.navbar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: var(--spacing-l) var(--spacing-xl);
+}
+
+.navbar-item a {
+  position: relative;
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--font-l);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Styling animation when hover navbar item */
+.navbar-item {
+  position: relative;
+  padding: var(--spacing-s);
+}
+.navbar-item a:hover {
+  color: var(--light-lime);
+}
+
+.navbar-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 0.1rem;
+  background-color: #b8e81b;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-item:hover::before {
+  width: 100%;
+}
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0.1rem;
+  background-color: #b8e81b;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+/* Implemnt media query to fit all viewports */
+@media (min-width: 900px) {
+  .navbar {
+    position: static;
+    display: block;
+    height: auto;
+    background-color: transparent;
+  }
+  .logo-container {
+    flex: 0;
+  }
+  .burger-btn {
+    display: none;
+  }
+
+  .navbar-close-btn {
+    display: none;
+  }
+  .navbar-list {
+    flex-direction: row;
+  }
+}

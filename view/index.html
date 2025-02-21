@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -8,8 +9,60 @@
       content="Portfolio showcasing the projects and skills of Diaa Dwikat, a frontend developer specializing in modern web technologies."
     />
 
+    <!-- Import Open Sans font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Cdn of fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Link main.css style -->
     <link rel="stylesheet" href="../style/main.css" />
+
+    <!-- Set title of Portfolio -->
     <title>Diaa Dwikat | Frontend Developer</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="/" title="Home" class="logo-container"
+          ><img
+            src="../assets/images/logo.svg"
+            alt="logo"
+            width="64"
+            height="54"
+            class="logo"
+          />
+        </a>
+
+        <nav class="navbar" aria-label="Main Navigation">
+          <button class="icon-btn navbar-close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="navbar-list">
+            <li class="navbar-item"><a href="home">Home</a></li>
+            <li class="navbar-item"><a href="about">About</a></li>
+            <li class="navbar-item"><a href="projects">Projects</a></li>
+            <li class="navbar-item"><a href="experience">Experience</a></li>
+            <li class="navbar-item"><a href="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode">
+          <!-- <i class="fa-solid fa-sun"></i> -->
+          <i class="fa-regular fa-sun"></i>
+        </button>
+
+        <button class="icon-btn burger-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </header>
+    </div>
+  </body>
 </html>

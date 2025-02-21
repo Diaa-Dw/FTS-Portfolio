@@ -1,0 +1,26 @@
+:root {
+  /* colors */
+  --navy: #08192d;
+  --light-navy: #182f57;
+
+  --light-lime: #b8e81b;
+
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+
+  /* Font Sizes */
+  --font-size-base: 1.4rem;
+  --font-l: 1.6rem;
+  --font-xxl: 2.4rem;
+
+  /* Font Family */
+  --font-family: "Open Sans", serif;
+  /* spacing unit */
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 2rem;
+  --spacing-xl: 4rem;
+}
