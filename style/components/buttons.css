@@ -1,6 +1,20 @@
+.btn {
+  font-size: var(--font-size-m);
+  padding: var(--spacing-l) var(--spacing-xl);
+  border-radius: 0.7rem;
+  transition: transform 0.3s ease-out;
+}
+
+.btn-outline {
+  position: relative;
+  color: var(--light-lime);
+  background-color: var(--navy);
+  border: 0.1rem solid var(--light-lime);
+}
+
 .icon-btn {
   background-color: transparent;
-  font-size: var(--font-xxl);
+  font-size: var(--font-size-xxl);
   color: var(--light-lime);
   padding: 0.5rem 0.8rem;
   border-radius: 0.3rem;
@@ -10,8 +24,24 @@
   margin: var(--spacing-s);
 }
 
+/* Add animation when hover and click button */
+.btn-outline::after {
+  content: "";
+  position: absolute;
+  right: -0.2rem;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+  background-color: var(--light-lime);
+  z-index: -1;
+}
+
+.btn-outline:hover {
+  transform: translate(-0.2rem, -0.2rem);
+}
+
 .icon-btn:hover {
   background-color: var(--light-navy);
   border: 1px solid var(--dark-slate);
 }
-

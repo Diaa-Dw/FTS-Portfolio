@@ -40,7 +40,7 @@
 
   background-color: var(--light-navy);
 
-  /* display: none; */
+  display: none;
 }
 .navbar-list {
   list-style: none;
@@ -56,7 +56,7 @@
   position: relative;
   color: var(--white);
   text-decoration: none;
-  font-size: var(--font-l);
+  font-size: var(--font-size-m);
   transition: color 0.3s ease-in-out;
 }
 
