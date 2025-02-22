@@ -1,9 +1,8 @@
 .intro {
-  height: 100vh;
+  min-height: 80vh;
   display: flex;
+  margin-block-start: 10rem;
   flex-direction: column;
-  justify-content: center;
-  padding-inline: var(--spacing-xl);
 }
 .intro > *:not(:nth-child(2)):not(:last-child) {
   margin-bottom: 2rem;
@@ -37,5 +36,8 @@
   justify-content: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 440px) {
+  .intro__btn-container {
+    justify-content: flex-start;
+  }
 }

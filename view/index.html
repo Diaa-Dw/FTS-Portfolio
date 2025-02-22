@@ -30,6 +30,20 @@
 
     <!-- Set title of Portfolio -->
     <title>Diaa Dwikat | Frontend Developer</title>
+
+    <script>
+      function reloadCSS() {
+        const links = document.querySelectorAll("link[rel='stylesheet']");
+        links.forEach((link) => {
+          const newLink = link.cloneNode();
+          newLink.href = link.href.split("?")[0] + "?v=" + new Date().getTime();
+          link.parentNode.replaceChild(newLink, link);
+        });
+      }
+
+      // Call this function when you change styles
+      reloadCSS();
+    </script>
   </head>
   <body>
     <div class="container">
@@ -49,8 +63,8 @@
             <i class="fa-solid fa-xmark"></i>
           </button>
           <ul class="navbar-list">
-            <li class="navbar-item"><a href="#home">Home</a></li>
-            <li class="navbar-item"><a href="about">About</a></li>
+            <li class="navbar-item"><a href="#">Home</a></li>
+            <li class="navbar-item"><a href="#about">About</a></li>
             <li class="navbar-item"><a href="projects">Projects</a></li>
             <li class="navbar-item"><a href="experience">Experience</a></li>
             <li class="navbar-item"><a href="contact">Contact</a></li>
@@ -67,6 +81,7 @@
       </header>
 
       <main>
+        <!-- Intro section start -->
         <section class="intro" id="home">
           <p class="intro__greeting">Hi, my name is</p>
 
@@ -86,6 +101,59 @@
           <div class="intro__btn-container">
             <a class="btn btn-outline">Show my work</a>
             <a class="btn btn-solid">Resume</a>
+          </div>
+        </section>
+
+        <!-- Intro section end -->
+
+        <!-- About Me section start -->
+        <section class="about" id="about">
+          <h2 class="about__title title">About Me</h2>
+          <div class="about__grid">
+            <!-- About Me Section -->
+            <article class="about__section--bio">
+              <h3 class="about__heading">Who Am I?</h3>
+              <p class="about__text">
+                I am <span class="highlight">Diaa Dwikat</span>, a passionate
+                Frontend Developer dedicated to building user-friendly and
+                high-performance web applications. I specialize in React.js,
+                JavaScript, and modern UI frameworks, with experience in
+                collaborating with backend teams, optimizing functionality, and
+                implementing best coding practices.
+              </p>
+            </article>
+
+            <!-- Skills Section -->
+            <section class="about__section--skills">
+              <h3 class="about__heading">Skills</h3>
+              <ul class="about__list">
+                <li class="about__list-item">HTML</li>
+                <li class="about__list-item">CSS</li>
+                <li class="about__list-item">sass</li>
+                <li class="about__list-item">JS (ES6+)</li>
+                <li class="about__list-item">React</li>
+                <li class="about__list-item">Redux</li>
+                <li class="about__list-item">Jest (Testing)</li>
+                <li class="about__list-item">NodeJS</li>
+                <li class="about__list-item">Express</li>
+                <li class="about__list-item">MongoDB</li>
+                <li class="about__list-item">Webpack</li>
+                <li class="about__list-item">Git & Version Control</li>
+              </ul>
+            </section>
+
+            <!-- Contact Section -->
+            <aside class="about__section--contact">
+              <h3 class="about__heading">
+                Let's Build Something Amazing Together.
+              </h3>
+              <button
+                class="about__button btn btn-solid"
+                onclick="location.href='mailto:diaa.h.h.dwikat@gmail.com'"
+              >
+                Contact Me
+              </button>
+            </aside>
           </div>
         </section>
       </main>

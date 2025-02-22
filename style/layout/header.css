@@ -6,10 +6,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgba(10, 25, 47, 0.85);
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .sticky {
-  position: fixed;
   box-shadow: 0 10px 30px -10px var(--light-navy);
   backdrop-filter: blur(0.4rem);
   z-index: 10;
@@ -60,17 +62,18 @@
 }
 
 .navbar-item a {
+  display: inline-block;
   position: relative;
   color: var(--white);
   text-decoration: none;
   font-size: var(--font-size-m);
+  padding: var(--spacing-s);
   transition: color 0.3s ease-in-out;
 }
 
 /* Styling animation when hover navbar item */
 .navbar-item {
   position: relative;
-  padding: var(--spacing-s);
 }
 .navbar-item a:hover {
   color: var(--light-lime);
