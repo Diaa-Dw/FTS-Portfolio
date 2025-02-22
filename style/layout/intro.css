@@ -1,12 +1,12 @@
-.hero {
+.intro {
   height: 100vh;
 }
 
-.hero .content-box {
+. {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-.hero .content-box 
+.hero .content-box;
