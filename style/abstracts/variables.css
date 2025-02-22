@@ -25,3 +25,15 @@
   --spacing-l: 2rem;
   --spacing-xl: 4rem;
 }
+
+.light-theme {
+  /* Light Theme */
+  --navy: #f0f4f8;
+  --light-navy: #dbe2ef;
+  --light-lime: #74c69d;
+  --dark-slate: #495057;
+  --slate: #6c757d;
+  --light-slate: #adb5bd;
+  --lightest-slate: #dee2e6;
+  --white: #ffffff;
+}

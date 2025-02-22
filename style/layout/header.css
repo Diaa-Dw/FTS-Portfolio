@@ -1,11 +1,18 @@
 .header {
-  position: fixed;
   display: flex;
   width: 100%;
   max-width: 1240px;
-  padding: var(--spacing-l) var(--spacing-xl);
+  padding: var(--spacing-s) var(--spacing-m);
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(10, 25, 47, 0.85);
+}
+
+.sticky {
+  position: fixed;
+  box-shadow: 0 10px 30px -10px var(--light-navy);
+  backdrop-filter: blur(0.4rem);
+  z-index: 10;
 }
 
 .logo-container {
@@ -100,6 +107,9 @@
 
 /* Implemnt media query to fit all viewports */
 @media (min-width: 900px) {
+  .header {
+    padding: var(--spacing-s) var(--spacing-m);
+  }
   .navbar {
     position: static;
     display: block;

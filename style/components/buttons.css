@@ -1,8 +1,9 @@
 .btn {
   font-size: var(--font-size-m);
-  padding: var(--spacing-l) var(--spacing-xl);
+  padding: var(--spacing-m) var(--spacing-xl);
   border-radius: 0.7rem;
   transition: all 0.3s ease-out;
+  font-weight: 600;
 }
 
 .btn-solid {
