@@ -19,6 +19,9 @@
   top: 2rem;
   padding: 0.5rem 0.8rem;
 }
+.navbar-close-btn:hover {
+  background-color: var(--navy);
+}
 
 /* Styling navbar and it's items */
 .navbar {
