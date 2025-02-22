@@ -13,8 +13,9 @@
 
   /* Font Sizes */
   --font-size-base: 1.4rem;
-  --font-l: 1.6rem;
-  --font-xxl: 2.4rem;
+  --font-size-m: 1.6rem;
+  --font-size-l: 2rem;
+  --font-size-xxl: 2.4rem;
 
   /* Font Family */
   --font-family: "Open Sans", serif;

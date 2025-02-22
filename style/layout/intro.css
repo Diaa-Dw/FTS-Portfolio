@@ -1,12 +1,37 @@
 .intro {
   height: 100vh;
-}
 
-. {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  padding-inline: var(--spacing-xl);
+}
+.intro > *:not(:nth-child(2)):not(:last-child) {
+  margin-bottom: 2rem;
 }
 
-.hero .content-box;
+.intro__greeting {
+  font-size: var(--font-size-m);
+  color: var(--light-lime);
+}
+
+.intro__name {
+  font-size: 6rem;
+  color: var(--white);
+}
+
+.intro__tagline {
+  font-size: 3rem;
+  color: var(--light-slate);
+}
+
+.intro__description {
+  font-size: var(--font-size-m);
+  color: var(--slate);
+  max-width: 50rem;
+}
+
+.intro__btn-container {
+  display: flex;
+  gap: 2rem;
+}
