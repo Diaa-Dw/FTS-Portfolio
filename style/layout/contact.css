@@ -1,0 +1,18 @@
+.contact {
+  margin-block: var(--spacing-xl);
+
+  color: var(--lightest-slate);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-l);
+  
+  text-align: center;
+}
+
+.contact__description {
+  font-size: var(--font-size-m);
+  max-width: 60rem;
+}
