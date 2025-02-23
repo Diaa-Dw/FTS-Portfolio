@@ -1,15 +1,19 @@
 .header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
   width: 100%;
   max-width: 145rem;
   padding: var(--spacing-s) var(--spacing-m);
   align-items: center;
   justify-content: space-between;
   background-color: var(--alpha-primary);
-  top: 0;
-  left: 0;
-  z-index: 20;
-  position: fixed;
+  backdrop-filter: blur(0.5rem);
+
+  transition: transform 0.3s ease-in-out;
 }
 
 .sticky {

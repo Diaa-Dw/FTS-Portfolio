@@ -20,11 +20,30 @@ body {
   font-family: var(--font-family);
   overflow-x: hidden;
 }
+/* To avoid scroll when ovelary is active */
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 /* Container that make the max width of page is 1240px */
 .container {
   max-width: 145rem;
   margin: 0 auto;
+}
+
+.overlay.on {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.89);
+  z-index: 30s;
 }
 
 section,
