@@ -12,17 +12,18 @@
   display: flex;
   position: relative;
   flex-direction: row-reverse;
-  color: var(--lightest-slate);
+  color: var(--text-secondary);
   font-size: var(--font-size-m);
+  font-weight: 500;
   max-width: min(100%, 55rem);
   min-height: 40rem;
   overflow: hidden;
   border-radius: 1.2rem;
-  border: 0.1rem solid var(--dark-slate);
+  border: 0.1rem solid var(--dark-tertiary);
 }
 
 .project__title {
-  color: var(--light-lime);
+  color: var(--secondary);
 }
 
 /* Design content of project */
@@ -47,7 +48,7 @@
   content: "//";
   font-weight: 600;
   margin-inline-start: var(--spacing-s);
-  color: var(--light-lime);
+  color: var(--secondary);
 }
 
 /* Design project iamge and it's container */

@@ -17,7 +17,7 @@
   left: 3rem;
   width: 0.4rem;
   height: 100%;
-  background: var(--light-lime);
+  background: var(--secondary);
   border-radius: 0.5rem;
   z-index: -2;
 }
@@ -30,14 +30,14 @@
 .company__logo img {
   width: 6rem;
   border-radius: 50%;
-  box-shadow: 0.2rem 0.2rem 0.6rem var(--slate),
-    -0.2rem -0.2rem 0.6rem var(--light-slate);
+  box-shadow: 0.2rem 0.2rem 0.6rem var(--tertiary),
+    -0.2rem -0.2rem 0.6rem var(--light-tertiary);
 }
 
 .experience {
   display: flex;
   flex-direction: row;
-  color: var(--lightest-slate);
+  color: var(--text-secondary);
 }
 
 .job__content {
@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-m);
-  border: 0.1rem solid var(--dark-slate);
+  border: 0.1rem solid var(--dark-tertiary);
   border-radius: 0.5rem;
   padding: var(--spacing-m) var(--spacing-l);
 }
@@ -55,7 +55,7 @@
 }
 
 .company__name {
-  color: var(--light-lime);
+  color: var(--secondary);
   text-decoration: none;
   font-size: var(--font-size-m);
 }
@@ -70,5 +70,5 @@
 }
 .job__outcome-item::before {
   content: "\25B6";
-  color: var(--light-lime);
+  color: var(--secondary);
 }

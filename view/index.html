@@ -26,31 +26,19 @@
     <!-- Link main.css style -->
     <link rel="stylesheet" href="../style/main.css" />
 
-    <link rel="icon" href="../assets/images/logo.svg" />
+    <link rel="icon" href="../assets/images/logo_dark.svg" />
 
     <!-- Set title of Portfolio -->
     <title>Diaa Dwikat | Frontend Developer</title>
 
-    <script>
-      function reloadCSS() {
-        const links = document.querySelectorAll("link[rel='stylesheet']");
-        links.forEach((link) => {
-          const newLink = link.cloneNode();
-          newLink.href = link.href.split("?")[0] + "?v=" + new Date().getTime();
-          link.parentNode.replaceChild(newLink, link);
-        });
-      }
-
-      // Call this function when you change styles
-      reloadCSS();
-    </script>
+    <script src="../index.js" defer></script>
   </head>
   <body>
     <div class="container">
       <header class="header">
         <a href="/" title="Home" class="logo-container"
           ><img
-            src="../assets/images/logo.svg"
+            src="../assets/images/logo_dark.svg"
             alt="logo"
             width="64"
             height="54"
@@ -58,16 +46,26 @@
           />
         </a>
 
-        <nav class="navbar" aria-label="Main Navigation">
+        <nav class="navbar hidden" aria-label="Main Navigation">
           <button class="icon-btn navbar-close-btn">
             <i class="fa-solid fa-xmark"></i>
           </button>
           <ul class="navbar-list">
-            <li class="navbar-item"><a href="#">Home</a></li>
-            <li class="navbar-item"><a href="#about">About</a></li>
-            <li class="navbar-item"><a href="#projects">Projects</a></li>
-            <li class="navbar-item"><a href="#experience">Experience</a></li>
-            <li class="navbar-item"><a href="#contact">Contact</a></li>
+            <li class="navbar-item">
+              <a class="navbar__item" href="#">Home</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar__item" href="#about">About</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar__item" href="#projects">Projects</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar__item" href="#experience">Experience</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar__item" href="#contact">Contact</a>
+            </li>
           </ul>
         </nav>
         <button class="icon-btn theme-toggle-btn" aria-label="Toggle dark mode">
@@ -99,7 +97,7 @@
           </p>
 
           <div class="intro__btn-container">
-            <a class="btn btn-outline">Show my work</a>
+            <a class="btn btn-outline" href="#projects">Show my work</a>
             <a class="btn btn-solid">Resume</a>
           </div>
         </section>
@@ -182,27 +180,35 @@
                   <li class="project__tech-item">Netlify</li>
                 </ul>
                 <div class="project__links">
-                  <a href="" class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://github.com/Diaa-Dw/RecipeNest"
+                    target="_blank"
+                  >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://delicate-lokum-b05e70.netlify.app/"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
                 </div>
               </article>
               <div class="project__image">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                  <picture>
-                    <source
-                      media="(min-width: 700px)"
-                      srcset="../assets/images/project_1_hq.png"
-                    />
-                    <img
-                      src="../assets//images/project_1_mobile.png"
-                      alt="RecipeNest Project"
-                    />
-                  </picture>
-                </a>
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="../assets/images/project_1_hq.png"
+                  />
+                  <img
+                    src="../assets//images/project_1_mobile.png"
+                    alt="RecipeNest Project"
+                  />
+                </picture>
               </div>
             </li>
             <!-- 1. project end -->
@@ -229,27 +235,35 @@
                   <li class="project__tech-item">Netlify</li>
                 </ul>
                 <div class="project__links">
-                  <a href="" class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://github.com/Diaa-Dw/Quizify"
+                    target="_blank"
+                  >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://main--quizify-v2.netlify.app/"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
                 </div>
               </article>
               <div class="project__image">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                  <picture>
-                    <source
-                      media="(min-width: 700px)"
-                      srcset="../assets/images/project_2_hq.png"
-                    />
-                    <img
-                      src="../assets//images/project_2_mobile.png"
-                      alt="RecipeNest Project"
-                    />
-                  </picture>
-                </a>
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="../assets/images/project_2_hq.png"
+                  />
+                  <img
+                    src="../assets//images/project_2_mobile.png"
+                    alt="RecipeNest Project"
+                  />
+                </picture>
               </div>
             </li>
             <!-- 2. project end -->
@@ -278,27 +292,35 @@
                   <li class="project__tech-item">Vercel</li>
                 </ul>
                 <div class="project__links">
-                  <a href="" class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://github.com/Diaa-Dw/MediSched"
+                    target="_blank"
+                  >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://care-pulse-ruby.vercel.app/"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
                 </div>
               </article>
               <div class="project__image">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                  <picture>
-                    <source
-                      media="(min-width: 700px)"
-                      srcset="../assets/images/project_3_hq.png"
-                    />
-                    <img
-                      src="../assets//images/project_3_mobile.png"
-                      alt="RecipeNest Project"
-                    />
-                  </picture>
-                </a>
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="../assets/images/project_3_hq.png"
+                  />
+                  <img
+                    src="../assets//images/project_3_mobile.png"
+                    alt="RecipeNest Project"
+                  />
+                </picture>
               </div>
             </li>
             <!-- 3. project end -->
@@ -328,27 +350,35 @@
                   <li class="project__tech-item">Netlify</li>
                 </ul>
                 <div class="project__links">
-                  <a href="" class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://github.com/Diaa-Dw/Popcorn-app"
+                    target="_blank"
+                  >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a class="icon-btn icon-btn--white">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://popcorn-appv2.netlify.app/"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
                 </div>
               </article>
               <div class="project__image">
-                <a href="#" rel="noopener noreferrer" target="_blank">
-                  <picture>
-                    <source
-                      media="(min-width: 700px)"
-                      srcset="../assets/images/project_4_hq.png"
-                    />
-                    <img
-                      src="../assets//images/project_4_mobile.png"
-                      alt="RecipeNest Project"
-                    />
-                  </picture>
-                </a>
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="../assets/images/project_4_hq.png"
+                  />
+                  <img
+                    src="../assets//images/project_4_mobile.png"
+                    alt="RecipeNest Project"
+                  />
+                </picture>
               </div>
             </li>
             <!-- 4. project end -->
@@ -537,7 +567,7 @@
         <div class="social__links">
           <a
             rel="noopener noreferrer"
-            class="icon-btn icon-btn--white"
+            class="icon-btn icon-btn--text-primary"
             href="https://github.com/Diaa-Dw"
             target="_blank"
           >
@@ -545,7 +575,7 @@
           </a>
           <a
             rel="noopener noreferrer"
-            class="icon-btn icon-btn--white"
+            class="icon-btn icon-btn--text-primary"
             href="https://www.linkedin.com/in/diaa-dwikat-6b49401a1/"
             target="_blank"
           >

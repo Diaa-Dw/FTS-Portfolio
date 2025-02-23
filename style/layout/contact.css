@@ -1,14 +1,14 @@
 .contact {
   margin-block: var(--spacing-xl);
 
-  color: var(--lightest-slate);
+  color: var(--text-secondary);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--spacing-l);
-  
+
   text-align: center;
 }
 

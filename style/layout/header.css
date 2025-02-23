@@ -5,14 +5,15 @@
   padding: var(--spacing-s) var(--spacing-m);
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(10, 25, 47, 0.85);
-  position: sticky;
+  background-color: var(--alpha-primary);
   top: 0;
   left: 0;
+  z-index: 20;
+  position: fixed;
 }
 
 .sticky {
-  box-shadow: 0 10px 30px -10px var(--light-navy);
+  box-shadow: 0 10px 30px -10px var(--light-primary);
   backdrop-filter: blur(0.4rem);
   z-index: 10;
 }
@@ -29,12 +30,14 @@
   padding: 0.5rem 0.8rem;
 }
 .navbar-close-btn:hover {
-  background-color: var(--navy);
+  background-color: var(--primary);
 }
 
 /* Styling navbar and it's items */
 .navbar {
   position: absolute;
+  z-index: 100;
+
   top: 0;
   right: 0;
 
@@ -47,10 +50,10 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--light-navy);
-
-  display: none;
+  background-color: var(--light-primary);
+  transition: transform 0.3s ease-in-out;
 }
+
 .navbar-list {
   list-style: none;
   display: flex;
@@ -64,7 +67,7 @@
 .navbar-item a {
   display: inline-block;
   position: relative;
-  color: var(--white);
+  color: var(--text-primary);
   text-decoration: none;
   font-size: var(--font-size-l);
   font-weight: 600;
@@ -77,7 +80,7 @@
   position: relative;
 }
 .navbar-item a:hover {
-  color: var(--light-lime);
+  color: var(--secondary);
 }
 
 .navbar-item::before {
@@ -87,7 +90,7 @@
   top: 0;
   width: 0%;
   height: 0.1rem;
-  background-color: #b8e81b;
+  background-color: var(--secondary);
   transition: width 0.3s ease-in-out;
 }
 
@@ -101,12 +104,16 @@
   bottom: 0;
   width: 0%;
   height: 0.1rem;
-  background-color: #b8e81b;
+  background-color: var(--secondary);
   transition: width 0.3s ease-in-out;
 }
 
 .navbar-item:hover::after {
   width: 100%;
+}
+.hidden {
+  /* display: none; */
+  transform: translateX(100%);
 }
 
 /* Implemnt media query to fit all viewports */
@@ -119,7 +126,9 @@
     display: block;
     height: auto;
     background-color: transparent;
+    transform: translateX(0%);
   }
+
   .logo-container {
     flex: 0;
   }

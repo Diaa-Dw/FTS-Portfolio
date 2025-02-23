@@ -1,5 +1,5 @@
 .intro {
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   margin-block-start: 10rem;
   flex-direction: column;
@@ -10,22 +10,22 @@
 
 .intro__greeting {
   font-size: var(--font-size-m);
-  color: var(--light-lime);
+  color: var(--secondary);
 }
 
 .intro__name {
   font-size: clamp(4rem, 8vw, 6rem);
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .intro__tagline {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--light-slate);
+  color: var(--light-tertiary);
 }
 
 .intro__description {
   font-size: var(--font-size-m);
-  color: var(--slate);
+  color: var(--tertiary);
   max-width: 50rem;
 }
 

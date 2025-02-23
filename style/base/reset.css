@@ -9,14 +9,16 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background-color: var(--navy);
-  color: var(--lightest-slate);
+  background-color: var(--primary);
+  color: var(--text-secondary);
   font-size: var(--font-size-base);
   line-height: 1.5;
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 /* Container that make the max width of page is 1240px */
@@ -32,12 +34,12 @@ section,
 
 h2 {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .highlight {
   display: inline-block;
-  color: var(--light-lime);
+  color: var(--secondary);
   position: relative;
 }
 .highlight::after {
@@ -47,7 +49,7 @@ h2 {
   height: 0.1rem;
   bottom: 0;
   left: 0;
-  background-color: var(--light-lime);
+  background-color: var(--secondary);
   transition: width 0.3s ease-in-out;
 }
 .highlight:hover::after {
@@ -66,7 +68,7 @@ h2 {
   width: 2rem; */
   border-radius: 0.5rem;
   font-size: var(--font-size-l);
-  color: var(--light-lime);
+  color: var(--secondary);
 }
 
 @media (min-width: 600px) {
