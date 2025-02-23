@@ -32,6 +32,13 @@
   margin: var(--spacing-s);
 }
 
+.icon-btn--white {
+  color: var(--white);
+  font-size: var(--font-size-l);
+  margin: 0;
+  margin-right: var(--spacing-m);
+}
+
 /* Add animation when hover and click button */
 .btn:hover {
   transform: translate(-0.2rem, -0.2rem);

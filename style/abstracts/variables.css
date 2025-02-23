@@ -2,6 +2,7 @@
   /* colors */
   --navy: #08192d;
   --light-navy: #182f57;
+  --alpha-primary: #0b1a2bde;
 
   --light-lime: #b8e81b;
 
@@ -37,4 +38,3 @@
   --lightest-slate: #dee2e6;
   --white: #ffffff;
 }
-

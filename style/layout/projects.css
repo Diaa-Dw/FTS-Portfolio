@@ -1,0 +1,72 @@
+.projects__flex {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+
+  color: var(--lightest-slate);
+  font-size: var(--font-size-m);
+
+  margin-block: var(--spacing-xl);
+  max-width: min(100%, 65rem);
+  min-height: 40rem;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  border: 0.1rem solid var(--slate);
+}
+
+.project__title {
+  color: var(--light-lime);
+}
+
+/* Design content of project */
+
+.project__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--alpha-primary);
+  padding: var(--spacing-l) var(--spacing-l);
+  gap: var(--spacing-m);
+}
+
+.project__tech-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+}
+
+.project__tech-list > *:not(*:last-child)::after {
+  content: "//";
+  font-weight: 600;
+  margin-inline-start: var(--spacing-s);
+  color: var(--light-lime);
+}
+
+/* Design project iamge and it's container */
+.project__image {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.project__image img {
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .project {
+    font-size: var(--font-size-l);
+  }
+
+  .project__content {
+    padding: var(--spacing-l) var(--spacing-xl);
+  }
+}
