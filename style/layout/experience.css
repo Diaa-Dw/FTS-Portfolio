@@ -1,0 +1,74 @@
+.experience__flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+
+  padding: var(--spacing-m) var(--spacing-l);
+  margin-block: var(--spacing-l);
+
+  list-style: none;
+}
+
+.experience__flex::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  width: 0.4rem;
+  height: 100%;
+  background: var(--light-lime);
+  border-radius: 0.5rem;
+  z-index: -2;
+}
+
+.company__logo {
+  position: relative;
+  left: -2rem;
+}
+
+.company__logo img {
+  width: 6rem;
+  border-radius: 50%;
+  box-shadow: 0.2rem 0.2rem 0.6rem var(--slate),
+    -0.2rem -0.2rem 0.6rem var(--light-slate);
+}
+
+.experience {
+  display: flex;
+  flex-direction: row;
+  color: var(--lightest-slate);
+}
+
+.job__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  border: 0.1rem solid var(--dark-slate);
+  border-radius: 0.5rem;
+  padding: var(--spacing-m) var(--spacing-l);
+}
+
+.job__title {
+  font-size: var(--font-size-l);
+}
+
+.company__name {
+  color: var(--light-lime);
+  text-decoration: none;
+  font-size: var(--font-size-m);
+}
+
+.job__outcome-list {
+  list-style: none;
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+.job__outcome-item {
+  display: flex;
+  gap: 1rem;
+}
+.job__outcome-item::before {
+  content: "\25B6";
+  color: var(--light-lime);
+}

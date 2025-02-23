@@ -3,9 +3,10 @@
 }
 
 .about__grid {
-  margin-block: 4rem;
+  margin: var(--spacing-xl) auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 40rem), 1fr));
+  max-width: 90rem;
   gap: var(--spacing-l);
   grid-auto-rows: auto;
 }
@@ -55,6 +56,7 @@
 .about__section--contact {
   display: flex;
   align-items: center;
+
   justify-content: center;
   flex-direction: column;
   gap: var(--spacing-l);
