@@ -1,9 +1,3 @@
-//Import main.css to integrate in index.html
-import "./style/main.css";
-//Import dark and light logo
-import darkLogo from "./assets/images/logo_dark.svg";
-import lightLogo from "./assets/images/logo_light.svg";
-
 //Header element
 const header = document.querySelector(".header");
 //Theme toggle button element
@@ -70,7 +64,7 @@ themeToggleBtn.addEventListener("click", (e) => {
 
   document.documentElement.setAttribute("data-theme", newTheme);
 
-  const newLogo = newTheme === "light" ? lightLogo : darkLogo;
+  const newLogo = `./assets/images/logo_${newTheme}.svg`;
 
   logo.src = newLogo;
 
@@ -81,7 +75,7 @@ window.addEventListener("load", () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
-    const newLogo = savedTheme === "light" ? lightLogo : darkLogo;
+    const newLogo = `./assets/images/logo_${savedTheme}.svg`;
     logo.src = newLogo;
   }
 });
