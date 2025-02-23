@@ -48,7 +48,7 @@ h2 {
   background-color: var(--light-lime);
   transition: width 0.3s ease-in-out;
 }
-.highlight:hover::after{
+.highlight:hover::after {
   width: 100%;
 }
 
