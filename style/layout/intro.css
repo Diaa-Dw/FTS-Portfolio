@@ -1,8 +1,9 @@
 .intro {
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
-  margin-block-start: 10rem;
   flex-direction: column;
+  justify-content: center;
+  margin-block-start: 10rem;
 }
 .intro > *:not(:nth-child(2)):not(:last-child) {
   margin-bottom: 2rem;
