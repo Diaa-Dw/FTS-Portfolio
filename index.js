@@ -1,3 +1,9 @@
+//Import main.css to integrate in index.html
+import "./style/main.css";
+//Import dark and light logo
+import darkLogo from "./assets/images/logo_dark.svg";
+import lightLogo from "./assets/images/logo_light.svg";
+
 //Header element
 const header = document.querySelector(".header");
 //Theme toggle button element
@@ -23,7 +29,10 @@ navbarCloseBtn.addEventListener("click", toggleNavbar);
 
 //Close navbar automaticly when navigate from one section to another
 navbarList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("navbar__item")) {
+  //Check if burger button display on the page and if on apply toggle navbar
+  const isNavboarVisible =
+    window.getComputedStyle(navbarOpenBtn).display !== "none";
+  if (e.target.classList.contains("navbar__item") && isNavboarVisible) {
     toggleNavbar();
   }
 });
@@ -48,6 +57,7 @@ document.addEventListener("click", (e) => {
     navbar.classList.add("hidden");
     overlay.classList.remove("on");
     document.body.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
   }
 });
 
@@ -60,7 +70,9 @@ themeToggleBtn.addEventListener("click", (e) => {
 
   document.documentElement.setAttribute("data-theme", newTheme);
 
-  logo.setAttribute("src", `../assets/images/logo_${newTheme}.svg`);
+  const newLogo = newTheme === "light" ? lightLogo : darkLogo;
+
+  logo.src = newLogo;
 
   localStorage.setItem("theme", newTheme);
 });
@@ -69,6 +81,7 @@ window.addEventListener("load", () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     document.documentElement.setAttribute("data-theme", savedTheme);
-    logo.setAttribute("src", `../assets/images/logo_${savedTheme}.svg`);
+    const newLogo = savedTheme === "light" ? lightLogo : darkLogo;
+    logo.src = newLogo;
   }
 });
