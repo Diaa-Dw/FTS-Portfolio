@@ -19,14 +19,19 @@ const loadSavedThme = () => {
     document.documentElement.setAttribute("data-theme", savedTheme);
     const newLogo = `./assets/images/logo_${savedTheme}.svg`;
     logo.src = newLogo;
-    themeIconSwitchHandler();
+    themeIconSwitchHandler(savedTheme);
   }
 };
 
 //Function to switch theme icon depends on current theme
-const themeIconSwitchHandler = () => {
-  lightThemeIcon.classList.toggle("active");
-  darkThemeIcon.classList.toggle("active");
+const themeIconSwitchHandler = (theme) => {
+  if (theme === "light") {
+    darkThemeIcon.classList.add("active");
+    lightThemeIcon.classList.remove("active");
+  } else {
+    lightThemeIcon.classList.add("active");
+    darkThemeIcon.classList.remove("active");
+  }
 };
 // It will toggle between dark and light theme
 const toggleTheme = (e) => {
@@ -42,7 +47,7 @@ const toggleTheme = (e) => {
 
   logo.src = newLogo;
 
-  themeIconSwitchHandler();
+  themeIconSwitchHandler(newTheme);
 
   localStorage.setItem("theme", newTheme);
 };
