@@ -2,6 +2,8 @@
 const header = document.querySelector(".header");
 //Theme toggle button element
 const themeToggleBtn = document.querySelector(".theme-toggle-btn");
+const lightThemeIcon = document.querySelector(".light-theme");
+const darkThemeIcon = document.querySelector(".dark-theme");
 const logo = document.querySelector(".logo");
 //Navbar elements
 const navbar = document.querySelector(".navbar");
@@ -17,7 +19,14 @@ const loadSavedThme = () => {
     document.documentElement.setAttribute("data-theme", savedTheme);
     const newLogo = `./assets/images/logo_${savedTheme}.svg`;
     logo.src = newLogo;
+    themeIconSwitchHandler();
   }
+};
+
+//Function to switch theme icon depends on current theme
+const themeIconSwitchHandler = () => {
+  lightThemeIcon.classList.toggle("active");
+  darkThemeIcon.classList.toggle("active");
 };
 // It will toggle between dark and light theme
 const toggleTheme = (e) => {
@@ -32,6 +41,8 @@ const toggleTheme = (e) => {
   const newLogo = `./assets/images/logo_${newTheme}.svg`;
 
   logo.src = newLogo;
+
+  themeIconSwitchHandler();
 
   localStorage.setItem("theme", newTheme);
 };

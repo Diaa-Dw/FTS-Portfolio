@@ -1,0 +1,20 @@
+.theme-toggle-btn {
+  position: relative;
+  overflow: hidden;
+}
+.theme-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.light-theme {
+  position: absolute;
+  transform: translateX(-130%);
+}
+
+.dark-theme {
+  transform: translateX(130%);
+}
+
+.active {
+  transform: translateX(0);
+}

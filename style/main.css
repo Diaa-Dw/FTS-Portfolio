@@ -2,6 +2,7 @@
 @import url("./base/reset.css");
 
 @import url("./components/buttons.css");
+@import url("./components/theme_toggle.css");
 
 @import url("./layout/header.css");
 @import url("./layout/intro.css");
