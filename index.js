@@ -43,7 +43,7 @@ const toggleTheme = (e) => {
 
   document.documentElement.setAttribute("data-theme", newTheme);
 
-  logo.classList.toggle("logo-dark");
+  logo.setAttribute("data-theme", newTheme);
 
   themeIconSwitchHandler(newTheme);
 
