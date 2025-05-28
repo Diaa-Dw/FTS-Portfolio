@@ -26,7 +26,7 @@
   flex: 1;
 }
 
-.logo-light {
+.logo {
   filter: invert(20%) sepia(84%) saturate(1172%) hue-rotate(197deg)
     brightness(50%) contrast(97%);
 }
