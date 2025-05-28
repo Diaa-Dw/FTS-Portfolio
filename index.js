@@ -43,9 +43,7 @@ const toggleTheme = (e) => {
 
   document.documentElement.setAttribute("data-theme", newTheme);
 
-  const newLogo = `./assets/images/logo_${newTheme}.svg`;
-
-  logo.src = newLogo;
+  logo.classList.toggle("logo-dark");
 
   themeIconSwitchHandler(newTheme);
 

@@ -26,6 +26,16 @@
   flex: 1;
 }
 
+.logo-light {
+  filter: invert(20%) sepia(84%) saturate(1172%) hue-rotate(197deg)
+    brightness(50%) contrast(97%);
+}
+
+.logo-dark {
+  filter: invert(81%) sepia(28%) saturate(2077%) hue-rotate(23deg)
+    brightness(500%) contrast(81%);
+}
+
 /* Styling buttons in that handle navbar on mobiles viewport */
 .navbar-close-btn {
   position: absolute;
