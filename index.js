@@ -12,15 +12,20 @@ const navbarOpenBtn = document.querySelector(".burger-btn");
 const navbarCloseBtn = document.querySelector(".navbar-close-btn");
 const overlay = document.querySelector(".overlay");
 
+function setLogoForTheme(theme) {
+  if (theme === "light") {
+    logo.src = "./assets/images/logo_light.svg";
+  } else {
+    logo.src = "./assets/images/logo_dark.svg";
+  }
+}
+
 //It will show the user prefereance theme if there is not it will display dark mode ass default
 const loadSavedThme = () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-    const newLogo = `./assets/images/logo_${savedTheme}.svg`;
-    logo.src = newLogo;
-    themeIconSwitchHandler(savedTheme);
-  }
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  setLogoForTheme(savedTheme);
+  themeIconSwitchHandler(savedTheme);
 };
 
 //Function to switch theme icon depends on current theme
@@ -36,17 +41,11 @@ const themeIconSwitchHandler = (theme) => {
 // It will toggle between dark and light theme
 const toggleTheme = (e) => {
   e.preventDefault();
-
   const currentTheme = document.documentElement.getAttribute("data-theme");
-
   const newTheme = currentTheme === "light" ? "dark" : "light";
-
   document.documentElement.setAttribute("data-theme", newTheme);
-
-  logo.setAttribute("data-theme", newTheme);
-
+  setLogoForTheme(newTheme);
   themeIconSwitchHandler(newTheme);
-
   localStorage.setItem("theme", newTheme);
 };
 
