@@ -103,3 +103,35 @@ document.addEventListener("click", clickOutsideNavbarHandler);
 
 //Event to show header if we scroll to top and hide it if we scroll to bottom
 window.addEventListener("scroll", handleHeaderVisibility);
+
+// Show More Projects functionality
+const showMoreBtn = document.getElementById("show-more-btn");
+const projectsContainer = document.getElementById("projects-container");
+const projects = projectsContainer.querySelectorAll(".project");
+
+let showingAllProjects = false;
+
+const toggleProjects = () => {
+  if (showingAllProjects) {
+    // Hide projects beyond the first 4
+    projects.forEach((project, index) => {
+      if (index >= 4) {
+        project.style.display = "none";
+      }
+    });
+    showMoreBtn.textContent = "Show More Projects";
+    showingAllProjects = false;
+  } else {
+    // Show all projects
+    projects.forEach((project) => {
+      project.style.display = "flex";
+    });
+    showMoreBtn.textContent = "Show Less";
+    showingAllProjects = true;
+  }
+};
+
+// Add event listener to show more button
+if (showMoreBtn) {
+  showMoreBtn.addEventListener("click", toggleProjects);
+}

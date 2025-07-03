@@ -174,9 +174,137 @@
         <!-- Project section start -->
         <section class="projects" id="projects">
           <h2 class="title">A small selection of recent projects</h2>
-          <ul class="projects__flex">
+          <ul class="projects__flex" id="projects-container">
             <!-- 1. project start -->
             <li class="project">
+              <div class="project__image">
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="./assets/images/project_5_hq.png"
+                  />
+                  <img
+                    src="./assets//images/project_5_mobile.png"
+                    alt="Nomadia Travel Platform"
+                  />
+                </picture>
+              </div>
+              <article class="project__content">
+                <h3 class="project__title">Nomadia</h3>
+                <div class="project__description">
+                  <p>
+                    A modern, full-featured travel booking platform built with
+                    React, TypeScript, and Material-UI. Features comprehensive
+                    hotel search with advanced filters, booking management,
+                    shopping cart functionality, and complete admin panel for
+                    managing cities, hotels, and rooms. Includes user
+                    authentication, responsive design, and payment integration
+                    for a complete travel booking experience.
+                  </p>
+                </div>
+                <ul class="project__tech-list">
+                  <li class="project__tech-item">React</li>
+                  <li class="project__tech-item">TypeScript</li>
+                  <li class="project__tech-item">Material-UI</li>
+                  <li class="project__tech-item">Redux Toolkit</li>
+                  <li class="project__tech-item">React Query</li>
+                  <li class="project__tech-item">Formik & Yup</li>
+                  <li class="project__tech-item">Vite</li>
+                  <li class="project__tech-item">Netlify</li>
+                </ul>
+                <div class="project__links">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://github.com/Diaa-Dw/Nomadia"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://nomadia-v1.netlify.app/"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <!-- 1. project end -->
+
+            <!-- 2. project start -->
+            <li class="project">
+              <div class="project__image">
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="./assets/images/project_6_hq.png"
+                  />
+                  <img
+                    src="./assets//images/project_6_mobile.png"
+                    alt="FTS Note Keeper Project"
+                  />
+                </picture>
+              </div>
+              <article class="project__content">
+                <h3 class="project__title">Note Keeper</h3>
+                <div class="project__description">
+                  <p>
+                    A modern web application designed to help users manage their
+                    notes with ease. Features secure authentication with email
+                    verification, password recovery, CRUD operations for notes,
+                    and a user-friendly interface with both light and dark
+                    themes. Built with Material-UI for a clean, accessible
+                    experience and real-time feedback.
+                  </p>
+                </div>
+                <ul class="project__tech-list">
+                  <li class="project__tech-item">React</li>
+                  <li class="project__tech-item">TypeScript</li>
+                  <li class="project__tech-item">Material-UI</li>
+                  <li class="project__tech-item">TanStack Query</li>
+                  <li class="project__tech-item">React Hot Toast</li>
+                  <li class="project__tech-item">Vite</li>
+                  <li class="project__tech-item">Render</li>
+                </ul>
+                <div class="project__links">
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://github.com/Diaa-Dw/FTS-note_keeper_website"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a
+                    class="icon-btn icon-btn--text-primary"
+                    rel="noopener noreferrer"
+                    href="https://fullstack-note-keeper.onrender.com/"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <!-- 2. project end -->
+
+            <!-- 3. project start -->
+            <li class="project">
+              <div class="project__image">
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="./assets/images/project_1_hq.png"
+                  />
+                  <img
+                    src="./assets//images/project_1_mobile.png"
+                    alt="RecipeNest Project"
+                  />
+                </picture>
+              </div>
               <article class="project__content">
                 <h3 class="project__title">RecipeNest</h3>
                 <div class="project__description">
@@ -213,23 +341,23 @@
                   </a>
                 </div>
               </article>
+            </li>
+            <!-- 3. project end -->
+
+            <!-- 4. project start -->
+            <li class="project">
               <div class="project__image">
                 <picture>
                   <source
                     media="(min-width: 700px)"
-                    srcset="./assets/images/project_1_hq.png"
+                    srcset="./assets/images/project_2_hq.png"
                   />
                   <img
-                    src="./assets//images/project_1_mobile.png"
-                    alt="RecipeNest Project"
+                    src="./assets//images/project_2_mobile.png"
+                    alt="Quizify Project"
                   />
                 </picture>
               </div>
-            </li>
-            <!-- 1. project end -->
-
-            <!-- 2. project start -->
-            <li class="project">
               <article class="project__content">
                 <h3 class="project__title">Quizify</h3>
                 <div class="project__description">
@@ -268,23 +396,23 @@
                   </a>
                 </div>
               </article>
-              <div class="project__image">
-                <picture>
-                  <source
-                    media="(min-width: 700px)"
-                    srcset="./assets/images/project_2_hq.png"
-                  />
-                  <img
-                    src="./assets//images/project_2_mobile.png"
-                    alt="RecipeNest Project"
-                  />
-                </picture>
-              </div>
             </li>
             <!-- 2. project end -->
 
             <!-- 3. project start -->
             <li class="project">
+              <div class="project__image">
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="/assets/images/project_3_hq.png"
+                  />
+                  <img
+                    src="./assets//images/project_3_mobile.png"
+                    alt="MediSched Project"
+                  />
+                </picture>
+              </div>
               <article class="project__content">
                 <h3 class="project__title">MediSched</h3>
                 <div class="project__description">
@@ -325,23 +453,23 @@
                   </a>
                 </div>
               </article>
-              <div class="project__image">
-                <picture>
-                  <source
-                    media="(min-width: 700px)"
-                    srcset="/assets/images/project_3_hq.png"
-                  />
-                  <img
-                    src="./assets//images/project_3_mobile.png"
-                    alt="RecipeNest Project"
-                  />
-                </picture>
-              </div>
             </li>
             <!-- 3. project end -->
 
             <!-- 4. project start -->
             <li class="project">
+              <div class="project__image">
+                <picture>
+                  <source
+                    media="(min-width: 700px)"
+                    srcset="./assets/images/project_4_hq.png"
+                  />
+                  <img
+                    src="./assets//images/project_4_mobile.png"
+                    alt="Popcorn Project"
+                  />
+                </picture>
+              </div>
               <article class="project__content">
                 <h3 class="project__title">Popcorn</h3>
                 <div class="project__description">
@@ -383,21 +511,15 @@
                   </a>
                 </div>
               </article>
-              <div class="project__image">
-                <picture>
-                  <source
-                    media="(min-width: 700px)"
-                    srcset="./assets/images/project_4_hq.png"
-                  />
-                  <img
-                    src="./assets//images/project_4_mobile.png"
-                    alt="RecipeNest Project"
-                  />
-                </picture>
-              </div>
             </li>
             <!-- 4. project end -->
           </ul>
+
+          <div class="projects__show-more">
+            <button class="btn btn-outline" id="show-more-btn">
+              Show More Projects
+            </button>
+          </div>
         </section>
         <!-- Project section end -->
 
